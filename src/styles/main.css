@@ -1,0 +1,147 @@
+html {
+    font-size: 16px;
+}
+body {
+    background: rgb(39, 36, 48);
+}
+
+.poke-container {
+    display: grid;
+    gap: 1.4rem;
+    grid-auto-rows: 10rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 24rem), 28rem));
+    justify-content: center;
+}
+.poke-image-container {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    display: inline-block;
+}
+.poke-card {
+    height: 10rem;
+    border: .2rem solid #fff;
+    border-radius: 6rem 4rem 0rem 6rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 10rem 1fr;
+    gap: .8rem;
+    color: white;
+}
+.pokeball {
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: rotate(-20deg);
+}
+.pokeball::before {
+    content: "";
+    width: 9rem;
+    height: 4.5rem;
+    left: calc(50% - 4.5rem);
+    top: .5rem;
+    background: #ff1c1c;
+    border-radius: 5rem 5rem 0 0;
+    position: absolute;
+}
+.pokeball::after {
+    content: "";
+    width: 9rem;
+    height: 4.5rem;
+    left: calc(50% - 4.5rem);
+    bottom: .5rem;
+    background: #9bb5c7;
+    border-radius: 0 0 5rem 5rem;
+    position: absolute;
+}
+.pokeball .detail {
+    width: 9rem;
+    height: .5rem;
+    left: calc(50% - 4.5rem);
+    background: #333;
+    margin-top: 4.8rem;
+    position: absolute;
+    outline: .5rem solid #fff;
+    border-radius: .5rem;
+    z-index: 2;
+}
+.pokeball .detail::before {
+    content: "";
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: #333;
+    position: absolute;
+    top: -2.5rem;
+    left: calc(50% - 2.5rem);
+    border: .5rem solid white;
+}
+.pokeball .detail::after {
+    content: "";
+    width: 3rem;
+    height: 3rem;
+    background: white;
+    position: absolute;
+    border-radius: 50%;
+    top: -1.5rem;
+    left: calc(50% - 1.5rem);
+}
+.pokeball{
+    opacity: .8;
+    transition: .3s all ease;
+}
+.poke-image-container:hover > .pokeball{
+    opacity: 1;
+    transform: rotate(0);
+}
+
+.poke-image-container img {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    transition: .6s all ease;
+}
+.poke-image-container:hover > img{
+    transform: scale(130%);
+}
+.poke-info {
+    display: grid;
+    gap: .5rem;
+    align-items: center;
+    padding: .8rem 0;
+}
+.name, .number {
+    margin: 0;
+    padding: 0;
+}
+.number {
+    font-size: clamp(1.6rem, 5vw, 2rem);
+}
+.name {
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
+}
+.poke-info ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 4rem), 5rem));
+    gap: .5rem;
+}
+.poke-info ul li {
+    display: flex;
+    align-items: center;
+}
+
+.poke-info ul li img {
+    width: clamp(.5rem, 5vw, 1.5rem);
+    margin-right: .5rem;
+}
+.poke-info ul li span {
+    font-size: clamp(.8rem, 5vw, 1.2rem);
+}
+
+
+
