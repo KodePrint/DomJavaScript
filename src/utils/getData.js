@@ -18,12 +18,10 @@ const randomIds = () => {
 }
 
 const getData = () => {
-    let pokeList = []
+    let pokeList = [];
     randomIds().forEach(id => {
         fetchData(id).then((value) => {
-            fetchData(id).then((value) => {
-                pokeList.push(value)  
-            })
+            pokeList.push(value)
         })
         // pokeList.push(poke)
     });

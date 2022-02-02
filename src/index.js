@@ -1,5 +1,12 @@
-import Template from './templates/Template'
+import Template from './templates/Template.js'
 import './styles/main.css'
-import getData from './utils/getData'
 
-getData()
+// Template().then((value) => {
+//     console.log(value)
+// })
+
+(async function App() {
+    const container = null || document.querySelector('.poke-container');
+    Template();
+    // container.innerHTML = await Template();
+})();
