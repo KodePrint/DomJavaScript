@@ -2,6 +2,8 @@ import { container, ids } from "webpack";
 
 const BASEURL = process.env.API;
 
+const PokeList = []
+
 const Num = (min, max) => {
     return Math.floor((Math.random() * (max - min + 1)) + min);
 }
@@ -18,15 +20,11 @@ const randomIds = () => {
 }
 
 const getData = () => {
-    let pokeList = [];
     randomIds().forEach(id => {
-        fetchData(id).then((value) => {
-            pokeList.push(value)
-        })
-        // pokeList.push(poke)
+        fetchData(id)
     });
 
-    return pokeList
+    return PokeList
 }
 
 const fetchData = async (id) => {
@@ -49,8 +47,7 @@ const fetchData = async (id) => {
         // response.name
         // response.sprites.front_default
         // response.types
-
-        return poke
+        PokeList.push(poke)
 
     } catch (error) {
         console.log(error)

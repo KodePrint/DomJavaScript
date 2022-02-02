@@ -16,10 +16,15 @@ import poison from '../assets/images/icons/poison.png'
 import psychic from '../assets/images/icons/psychic.png'
 
 const Template = async () => {
-    const data = await getData();
-    const pokeListTemplate = []
+    const data = getData();
+    const pokeListTemplate = [1,2,3,4]
+    let poke = {
+        "name": "Hola",
+        "type": "Loco"
+    }
+    pokeListTemplate.push(poke)
+    console.log(pokeListTemplate)
     console.log(data)
-    console.log(typeof(data))
     // data.forEach(pokemon => {
     //     let card = `
     //     <div class="poke-card">
