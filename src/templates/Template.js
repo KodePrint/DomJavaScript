@@ -1,31 +1,20 @@
-import getData from "../utils/getData";
-import fire from '../assets/images/icons/fire.png'
-import bug from '../assets/images/icons/bug.png'
-import dark from '../assets/images/icons/dark.png'
-import dragon from '../assets/images/icons/dragon.png'
-import electric from '../assets/images/icons/electric.png'
-import fairy from '../assets/images/icons/fairy.png'
-import fighting from '../assets/images/icons/fighting.png'
-import flying from '../assets/images/icons/flying.png'
-import ghost from '../assets/images/icons/ghost.png'
-import grass from '../assets/images/icons/grass.png'
-import ground from '../assets/images/icons/ground.png'
-import ice from '../assets/images/icons/ice.png'
-import normal from '../assets/images/icons/normal.png'
-import poison from '../assets/images/icons/poison.png'
-import psychic from '../assets/images/icons/psychic.png'
+import {Elements} from "../utils/genElement";
+import {fetchData} from "../utils/getData";
+import {randomIds} from "../utils/randomId";
 
 const Template = async () => {
-    const data = getData();
-    const pokeListTemplate = [1,2,3,4]
-    let poke = {
-        "name": "Hola",
-        "type": "Loco"
+    const ListTemplates = [];
+    let pokeCard = ``;
+    let ids = randomIds();
+
+    for (let i = 0; i < ids.length; i++) {
+        let poke = await fetchData(ids[i])
+        ListTemplates.push(Elements(poke));
     }
-    pokeListTemplate.push(poke)
-    console.log(pokeListTemplate)
-    console.log(data)
-    // data.forEach(pokemon => {
+
+    return ListTemplates
+}
+// data.forEach(pokemon => {
     //     let card = `
     //     <div class="poke-card">
     //         <picture class="poke-image-container">
@@ -52,7 +41,5 @@ const Template = async () => {
     //     `
         
     // });
-    return pokeListTemplate
-}
 
-export default Template;
+export {Template};

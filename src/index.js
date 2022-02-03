@@ -1,4 +1,4 @@
-import Template from './templates/Template.js'
+import {Template} from './templates/Template.js'
 import './styles/main.css'
 
 // Template().then((value) => {
@@ -7,6 +7,6 @@ import './styles/main.css'
 
 (async function App() {
     const container = null || document.querySelector('.poke-container');
-    Template();
-    // container.innerHTML = await Template();
+    let object = await Template()
+    container.append(...object)
 })();
