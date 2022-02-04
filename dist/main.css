@@ -7,6 +7,17 @@ html {
 body {
     background: rgb(39, 36, 48);
 }
+#main {
+    display: grid;
+    place-content: center;
+}
+.title h1 {
+    color: #fff;
+    font-size: clamp(1.8rem, 5vw, 4rem);
+    display: flex;
+    align-items: center;
+}
+
 
 .poke-container {
     display: grid;
@@ -145,6 +156,30 @@ body {
 .poke-info ul li span {
     font-size: clamp(.8rem, 5vw, 1.2rem);
     text-transform: capitalize;
+}
+
+.getData {
+    margin: 0 auto;
+    justify-content: center;
+    border: none;
+    border-radius: .5rem;
+    font-size: clamp(1.4rem, 2vw, 2rem);
+    padding: 1rem;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.getData::after{
+    margin-left: .2rem;
+    display: block;
+    content: "";
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url(1faeca5f2a2c67adf861.png);
+    background-position: center;
+    background-size: cover;
 }
 
 
