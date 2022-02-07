@@ -9,6 +9,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'main.js',
+        assetModuleFilename: 'assets/images/[hash].[ext][query]'
     },
     mode: 'development',
     watch: true,
@@ -37,6 +38,22 @@ module.exports = {
                 test: /\.png/,
                 type: 'asset/resource'
             },
+            // Para importar fonts woff y woff2
+            // {
+            //     test: /\.(woff|woff2|ttf)$/i,
+            //     type:'asset/resource',
+            //     use: {
+            //         loader: 'url-loader',
+            //         options: {
+            //             limit:10000,
+            //             mimetype: "application/font-woff",
+            //             name: "[name].[ext]",
+            //             outputPath: "./assets/fonts/",
+            //             publicPath: "./assets/fonts/",
+            //             esModule: false,
+            //         },
+            //     },
+            // }
         ]
     },
     plugins: [

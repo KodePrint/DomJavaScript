@@ -5,7 +5,7 @@ const Num = (min, max) => {
 const randomIds = () => {
     var idsPokemon = []
     while (idsPokemon.length < 6) {
-        let poke = Num(1,150)
+        let poke = Num(1,898)
         if (!idsPokemon.includes(poke)) {
             idsPokemon.push(poke)
         }

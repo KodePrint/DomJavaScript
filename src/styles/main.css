@@ -1,12 +1,44 @@
-html {
-    font-size: 16px;
+@font-face {
+    font-family: 'Pokemon';
+    src: url('../assets/fonts/PokemonSolid.ttf') format('tff'),
+        url('../assets/fonts/Pokemon-Solid.woff') format('woff');
+    font-style: normal;
 }
+:root {
+    --dark: #272430;
+    --white: #fff;
+    --border: #e6e6e6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
 body {
-    background: rgb(39, 36, 48);
+    font-size: 1.6rem;
+    background-color: var(--dark);
+    color: var(--white);
+    width: 100%;
 }
 #main {
+    margin: 0 auto;
+    /* El ancho maximo sera de 90% 
+    pero nunca superara 1420px */
+    max-width: min(90%, 142rem);
     display: grid;
-    place-content: center;
+}
+.title {
+    margin-top: 1.4rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 .title h1 {
     color: #fff;
@@ -14,132 +46,88 @@ body {
     display: flex;
     align-items: center;
 }
-
-
 .poke-container {
+    margin-top: 1.4rem;
+    place-content: center;
     display: grid;
-    gap: 1.4rem;
-    grid-auto-rows: 10rem;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 24rem), 28rem));
-    justify-content: center;
-}
-.poke-image-container {
-    position: relative;
-    width: 10rem;
-    height: 10rem;
-    display: inline-block;
+    grid-template-rows: 15rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 30rem), 34rem));
+    gap: 2rem;
 }
 .poke-card {
-    height: 10rem;
-    border: .2rem solid #fff;
-    border-radius: 6rem 4rem 0rem 6rem;
+    border-bottom-right-radius: 5rem;
     display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 10rem 1fr;
-    gap: .8rem;
-    color: white;
+    grid-template-columns: 15rem auto;
+    grid-template-rows: 15rem;
 }
-.pokeball {
-    position: absolute;
-    width: 10rem;
-    height: 10rem;
-    background-color: #fff;
-    border-radius: 50%;
-    transform: rotate(-20deg);
-}
-.pokeball::before {
-    content: "";
-    width: 9rem;
-    height: 4.5rem;
-    left: calc(50% - 4.5rem);
-    top: .5rem;
-    background: #ff1c1c;
-    border-radius: 5rem 5rem 0 0;
-    position: absolute;
-}
-.pokeball::after {
-    content: "";
-    width: 9rem;
-    height: 4.5rem;
-    left: calc(50% - 4.5rem);
-    bottom: .5rem;
-    background: #9bb5c7;
-    border-radius: 0 0 5rem 5rem;
-    position: absolute;
-}
-.pokeball .detail {
-    width: 9rem;
-    height: .5rem;
-    left: calc(50% - 4.5rem);
-    background: #333;
-    margin-top: 4.8rem;
-    position: absolute;
-    outline: .5rem solid #fff;
-    border-radius: .5rem;
+.poke-image-container{
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 2;
 }
-.pokeball .detail::before {
-    content: "";
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    background: #333;
+.pokeball {
+    background-image: url('../assets/images/img/pokeball.svg');
+    width: 15rem;
+    height: 15rem;
+    transform: rotate(-25deg);
     position: absolute;
-    top: -2.5rem;
-    left: calc(50% - 2.5rem);
-    border: .5rem solid white;
-}
-.pokeball .detail::after {
-    content: "";
-    width: 3rem;
-    height: 3rem;
-    background: white;
-    position: absolute;
-    border-radius: 50%;
-    top: -1.5rem;
-    left: calc(50% - 1.5rem);
-}
-.pokeball{
-    opacity: .8;
-    transition: .3s all ease;
-}
-.poke-image-container:hover > .pokeball{
-    opacity: 1;
-    transform: rotate(0);
-}
-
-.poke-image-container img {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
     transition: .6s all ease;
+    z-index: -1;
 }
-.poke-image-container:hover > img{
-    transform: scale(130%);
+.poke-image-container img {
+    max-width: min(100%, 10rem);
+    max-height: min(100%, 10rem);
+}
+.poke-image-container:hover .pokeball {
+    transform: rotate(0deg);  
+}
+.poke-image-container:hover img {
+    animation: movePokemon 2s ease;
 }
 .poke-info {
+    border: .6rem solid var(--border);
+    border-left: transparent;
+    margin: .2rem 0;
+    border-bottom-right-radius: 5rem;
+    position: relative;
     display: grid;
-    gap: .5rem;
+    grid-template-rows: repeat(3, auto);
+    padding: 1rem;
     align-items: center;
-    padding: .8rem 0;
 }
-.name, .number {
-    margin: 0;
-    padding: 0;
+.poke-info::before {
+    content: "";
+    position: absolute;
+    border: .3rem solid var(--border);
+    top: -.6rem;
+    width: 10rem;
+    left: -8rem;
 }
-.number {
-    font-size: clamp(1.6rem, 5vw, 2rem);
+.poke-info::after {
+    content: "";
+    position: absolute;
+    border: .3rem solid var(--border);
+    bottom: -.6rem;
+    width: 10rem;
+    left: -8rem;
 }
-.name {
-    font-size: clamp(1.6rem, 5vw, 2.4rem);
+.poke-info .number {
+    opacity: .5;
+    font-size: clamp(1.2rem, 2vw, 2.5rem);
+    text-transform: capitalize;
+}
+.poke-info .name {
+    font-size: clamp(1.6rem, 2vw, 2.5rem);
     text-transform: capitalize;
 }
 .poke-info ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: .5rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    line-gap-override: 1rem;
 }
 .poke-info ul li {
     display: flex;
@@ -147,37 +135,116 @@ body {
 }
 
 .poke-info ul li img {
-    width: clamp(.5rem, 5vw, 1.5rem);
+    max-width: clamp(1.4rem, 2vw, 2.5rem);
     margin-right: .5rem;
 }
 .poke-info ul li span {
-    font-size: clamp(.8rem, 5vw, 1.2rem);
-    text-transform: capitalize;
+    font-size: clamp(.8rem, 2vw, 1.2rem);
+
+}
+
+.buttons {
+    margin-top: 1.4rem;
+    display: grid;
+    place-content: center;
 }
 
 .getData {
-    margin: 0 auto;
-    justify-content: center;
     border: none;
+    padding: 1.8rem;
     border-radius: .5rem;
-    font-size: clamp(1.4rem, 2vw, 2rem);
-    padding: 1rem;
-    background: transparent;
-    color: white;
-    cursor: pointer;
+    font-size: clamp(1rem, 5vw, 1.6rem);
     display: flex;
     align-items: center;
+    background: transparent;
+    font-weight: bold;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    width: 17rem;
+    text-shadow: .2rem .2rem .2rem var(--dark);
 }
-.getData::after{
-    margin-left: .2rem;
-    display: block;
-    content: "";
-    width: 2.5rem;
-    height: 2.5rem;
-    background-image: url("../assets/images/icons/pokeball.png");
-    background-position: center;
+.getData .buton-poke {
+    position: absolute;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    background-image: url('../assets/images/icons/pokeball.png');
     background-size: cover;
+    animation: rotate 2s infinite linear;
+    left: -4rem;
+    transition: .6s all ease;
+    z-index: -1;
+    opacity: 0;
+}
+.getData:hover .buton-poke {
+    left: calc(100% - 4rem);
+    opacity: 1;
+}
+.getData svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: none;
+}
+.getData rect {
+    width: 100%;
+    height: 100%;
+    stroke: var(--border);
+    stroke-width: .8rem;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    transition: .6s all ease;
+}
+.getData:hover rect {
+    stroke-dashoffset: 0;
 }
 
 
+/* .getData::before {
+    content: "";
+    height: 100%;
+    width: 150%;
+    background: red;
+    position: absolute;
+    top: calc(-25%);
+    left: calc(-50%);
+    transform: rotate(-15deg);
+    z-index: -1;
+}
+.getData::after {
+    content: "";
+    height: 100%;
+    width: 150%;
+    background: var(--border);
+    position: absolute;
+    top: calc(25%);
+    right: calc(-50%);
+    transform: rotate(-15deg);
+    z-index: -1;
+} */
 
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(160deg) scale(125%);
+    }
+
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes movePokemon {
+    12% {transform: translateX(-.5rem);}
+    25% {transform: translateX(.5rem);}
+    50% {transform: scale(150%) translateX(-.5rem);}
+    62% {transform: translateX(.5rem);}
+    75% {transform: translateX(-.5rem);}
+    100% {transform: scale(100%) translateX(.-5rem);}
+    
+}

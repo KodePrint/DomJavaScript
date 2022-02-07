@@ -14,9 +14,10 @@ import normal from '../assets/images/icons/normal.png'
 import poison from '../assets/images/icons/poison.png'
 import psychic from '../assets/images/icons/psychic.png'
 import water from '../assets/images/icons/water.png'
+import rock from '../assets/images/icons/rock.png'
+import steel from '../assets/images/icons/steel.png'
 
 const setImg = (type) => {
-    console.log(type)
     let img
     switch (type) {
         case ('fire'):
@@ -64,11 +65,16 @@ const setImg = (type) => {
         case ('psychic'):
             img = psychic
             break;
+        case ('rock'):
+            img = rock
+            break;
+        case ('steel'):
+            img = steel
+            break;
         default:
             img = water
             break;
     }
-    console.log(img)
     return img
 }
 
@@ -92,10 +98,12 @@ const Elements = (pk) => {
     picture.classList.add('poke-image-container');
     let pokeball = document.createElement('div');
     pokeball.classList.add('pokeball');
-    let deatil = document.createElement('div');
-    deatil.classList.add('detail');
     let img = document.createElement('img');
-    img.src = pk.sprites.front_default;
+    if (pk.sprites.other.dream_world.front_default) {
+        img.src = pk.sprites.other.dream_world.front_default
+    } else {
+        img.src = pk.sprites.front_default
+    }
     img.alt = pk.name;
     let info = document.createElement('div');
     info.classList.add('poke-info');
@@ -109,8 +117,7 @@ const Elements = (pk) => {
     list.classList.add('types')
 
     getTypes(pk.types, list);
-
-    pokeball.append(deatil);
+    
     picture.append(pokeball, img)
     info.append(number, name, list)
     pcard.append(picture, info)

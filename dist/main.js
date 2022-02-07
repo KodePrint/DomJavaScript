@@ -26,7 +26,7 @@ eval("module.exports = __webpack_require__(/*! regenerator-runtime */ \"./node_m
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ \"./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js\");\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ \"./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"./node_modules/@babel/runtime/regenerator/index.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _templates_Template_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./templates/Template.js */ \"./src/templates/Template.js\");\n/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/main.css */ \"./src/styles/main.css\");\n\n\n\n\n // Template().then((value) => {\n//     console.log(value)\n// })\n\nvar container =  false || document.querySelector('.poke-container');\nvar getTeam = document.querySelector('.getData').addEventListener('click', function () {\n  DrawTemplate();\n});\n\nvar DrawTemplate = /*#__PURE__*/function () {\n  var _ref = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__[\"default\"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().mark(function _callee() {\n    var object, cards;\n    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _context.next = 2;\n            return (0,_templates_Template_js__WEBPACK_IMPORTED_MODULE_3__.Template)();\n\n          case 2:\n            object = _context.sent;\n\n            if (container.childElementCount > 0) {\n              cards = document.querySelectorAll('.poke-card');\n              cards.forEach(function (card) {\n                card.remove();\n              });\n            }\n\n            container.append.apply(container, (0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(object));\n\n          case 5:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee);\n  }));\n\n  return function DrawTemplate() {\n    return _ref.apply(this, arguments);\n  };\n}();\n\n//# sourceURL=webpack://domjavascritp/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ \"./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js\");\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ \"./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"./node_modules/@babel/runtime/regenerator/index.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _templates_Template_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./templates/Template.js */ \"./src/templates/Template.js\");\n/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/main.css */ \"./src/styles/main.css\");\n\n\n\n\n\nvar picture = document.querySelector('.poke-image-container');\nvar elementWidth = window.getComputedStyle(picture);\npicture.style.height = elementWidth.getPropertyValue('width');\nconsole.log(elementWidth.getPropertyValue('width'));\npicture.addEventListener('change', function () {\n  picture.style.height = picture.style.width;\n}); // Template().then((value) => {\n//     console.log(value)\n// })\n\nvar container =  false || document.querySelector('.poke-container');\nvar getTeam = document.querySelector('.getData').addEventListener('click', function () {\n  DrawTemplate();\n});\n\nvar DrawTemplate = /*#__PURE__*/function () {\n  var _ref = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__[\"default\"])( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().mark(function _callee() {\n    var object, cards;\n    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _context.next = 2;\n            return (0,_templates_Template_js__WEBPACK_IMPORTED_MODULE_3__.Template)();\n\n          case 2:\n            object = _context.sent;\n\n            if (container.childElementCount > 0) {\n              cards = document.querySelectorAll('.poke-card');\n              cards.forEach(function (card) {\n                card.remove();\n              });\n            }\n\n            container.append.apply(container, (0,_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(object));\n\n          case 5:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee);\n  }));\n\n  return function DrawTemplate() {\n    return _ref.apply(this, arguments);\n  };\n}();\n\n//# sourceURL=webpack://domjavascritp/./src/index.js?");
 
 /***/ }),
 
@@ -48,7 +48,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Elements\": () => (/* binding */ Elements)\n/* harmony export */ });\n/* harmony import */ var _assets_images_icons_fire_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/images/icons/fire.png */ \"./src/assets/images/icons/fire.png\");\n/* harmony import */ var _assets_images_icons_bug_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/images/icons/bug.png */ \"./src/assets/images/icons/bug.png\");\n/* harmony import */ var _assets_images_icons_dark_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/images/icons/dark.png */ \"./src/assets/images/icons/dark.png\");\n/* harmony import */ var _assets_images_icons_dragon_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/images/icons/dragon.png */ \"./src/assets/images/icons/dragon.png\");\n/* harmony import */ var _assets_images_icons_electric_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/images/icons/electric.png */ \"./src/assets/images/icons/electric.png\");\n/* harmony import */ var _assets_images_icons_fairy_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../assets/images/icons/fairy.png */ \"./src/assets/images/icons/fairy.png\");\n/* harmony import */ var _assets_images_icons_fighting_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../assets/images/icons/fighting.png */ \"./src/assets/images/icons/fighting.png\");\n/* harmony import */ var _assets_images_icons_flying_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../assets/images/icons/flying.png */ \"./src/assets/images/icons/flying.png\");\n/* harmony import */ var _assets_images_icons_ghost_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../assets/images/icons/ghost.png */ \"./src/assets/images/icons/ghost.png\");\n/* harmony import */ var _assets_images_icons_grass_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../assets/images/icons/grass.png */ \"./src/assets/images/icons/grass.png\");\n/* harmony import */ var _assets_images_icons_ground_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../assets/images/icons/ground.png */ \"./src/assets/images/icons/ground.png\");\n/* harmony import */ var _assets_images_icons_ice_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../assets/images/icons/ice.png */ \"./src/assets/images/icons/ice.png\");\n/* harmony import */ var _assets_images_icons_normal_png__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../assets/images/icons/normal.png */ \"./src/assets/images/icons/normal.png\");\n/* harmony import */ var _assets_images_icons_poison_png__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../assets/images/icons/poison.png */ \"./src/assets/images/icons/poison.png\");\n/* harmony import */ var _assets_images_icons_psychic_png__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../assets/images/icons/psychic.png */ \"./src/assets/images/icons/psychic.png\");\n/* harmony import */ var _assets_images_icons_water_png__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../assets/images/icons/water.png */ \"./src/assets/images/icons/water.png\");\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvar setImg = function setImg(type) {\n  console.log(type);\n  var img;\n\n  switch (type) {\n    case 'fire':\n      img = _assets_images_icons_fire_png__WEBPACK_IMPORTED_MODULE_0__;\n      break;\n\n    case 'bug':\n      img = _assets_images_icons_bug_png__WEBPACK_IMPORTED_MODULE_1__;\n      break;\n\n    case 'dark':\n      img = _assets_images_icons_dark_png__WEBPACK_IMPORTED_MODULE_2__;\n      break;\n\n    case 'dragon':\n      img = _assets_images_icons_dragon_png__WEBPACK_IMPORTED_MODULE_3__;\n      break;\n\n    case 'electric':\n      img = _assets_images_icons_electric_png__WEBPACK_IMPORTED_MODULE_4__;\n      break;\n\n    case 'fairy':\n      img = _assets_images_icons_fairy_png__WEBPACK_IMPORTED_MODULE_5__;\n      break;\n\n    case 'fighting':\n      img = _assets_images_icons_fighting_png__WEBPACK_IMPORTED_MODULE_6__;\n      break;\n\n    case 'flying':\n      img = _assets_images_icons_flying_png__WEBPACK_IMPORTED_MODULE_7__;\n      break;\n\n    case 'ghost':\n      img = _assets_images_icons_ghost_png__WEBPACK_IMPORTED_MODULE_8__;\n      break;\n\n    case 'grass':\n      img = _assets_images_icons_grass_png__WEBPACK_IMPORTED_MODULE_9__;\n      break;\n\n    case 'ground':\n      img = _assets_images_icons_ground_png__WEBPACK_IMPORTED_MODULE_10__;\n      break;\n\n    case 'ice':\n      img = _assets_images_icons_ice_png__WEBPACK_IMPORTED_MODULE_11__;\n      break;\n\n    case 'normal':\n      img = _assets_images_icons_normal_png__WEBPACK_IMPORTED_MODULE_12__;\n      break;\n\n    case 'poison':\n      img = _assets_images_icons_poison_png__WEBPACK_IMPORTED_MODULE_13__;\n      break;\n\n    case 'psychic':\n      img = _assets_images_icons_psychic_png__WEBPACK_IMPORTED_MODULE_14__;\n      break;\n\n    default:\n      img = _assets_images_icons_water_png__WEBPACK_IMPORTED_MODULE_15__;\n      break;\n  }\n\n  console.log(img);\n  return img;\n};\n\nvar getTypes = function getTypes(types, ul) {\n  types.forEach(function (element) {\n    var li = document.createElement('li');\n    var img = document.createElement('img');\n    var span = document.createElement('span');\n    span.textContent = element.type.name;\n    img.src = setImg(element.type.name);\n    li.append(img, span);\n    ul.append(li);\n  });\n};\n\nvar Elements = function Elements(pk) {\n  var pcard = document.createElement('div');\n  pcard.classList.add('poke-card');\n  var picture = document.createElement('picture');\n  picture.classList.add('poke-image-container');\n  var pokeball = document.createElement('div');\n  pokeball.classList.add('pokeball');\n  var deatil = document.createElement('div');\n  deatil.classList.add('detail');\n  var img = document.createElement('img');\n  img.src = pk.sprites.front_default;\n  img.alt = pk.name;\n  var info = document.createElement('div');\n  info.classList.add('poke-info');\n  var number = document.createElement('h3');\n  number.classList.add('number');\n  number.textContent = \"No. \".concat(pk.id);\n  var name = document.createElement('h2');\n  name.classList.add('name');\n  name.textContent = pk.name;\n  var list = document.createElement('ul');\n  list.classList.add('types');\n  getTypes(pk.types, list);\n  pokeball.append(deatil);\n  picture.append(pokeball, img);\n  info.append(number, name, list);\n  pcard.append(picture, info);\n  return pcard;\n};\n\n\n\n//# sourceURL=webpack://domjavascritp/./src/utils/genElement.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Elements\": () => (/* binding */ Elements)\n/* harmony export */ });\n/* harmony import */ var _assets_images_icons_fire_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/images/icons/fire.png */ \"./src/assets/images/icons/fire.png\");\n/* harmony import */ var _assets_images_icons_bug_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/images/icons/bug.png */ \"./src/assets/images/icons/bug.png\");\n/* harmony import */ var _assets_images_icons_dark_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/images/icons/dark.png */ \"./src/assets/images/icons/dark.png\");\n/* harmony import */ var _assets_images_icons_dragon_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/images/icons/dragon.png */ \"./src/assets/images/icons/dragon.png\");\n/* harmony import */ var _assets_images_icons_electric_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/images/icons/electric.png */ \"./src/assets/images/icons/electric.png\");\n/* harmony import */ var _assets_images_icons_fairy_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../assets/images/icons/fairy.png */ \"./src/assets/images/icons/fairy.png\");\n/* harmony import */ var _assets_images_icons_fighting_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../assets/images/icons/fighting.png */ \"./src/assets/images/icons/fighting.png\");\n/* harmony import */ var _assets_images_icons_flying_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../assets/images/icons/flying.png */ \"./src/assets/images/icons/flying.png\");\n/* harmony import */ var _assets_images_icons_ghost_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../assets/images/icons/ghost.png */ \"./src/assets/images/icons/ghost.png\");\n/* harmony import */ var _assets_images_icons_grass_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../assets/images/icons/grass.png */ \"./src/assets/images/icons/grass.png\");\n/* harmony import */ var _assets_images_icons_ground_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../assets/images/icons/ground.png */ \"./src/assets/images/icons/ground.png\");\n/* harmony import */ var _assets_images_icons_ice_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../assets/images/icons/ice.png */ \"./src/assets/images/icons/ice.png\");\n/* harmony import */ var _assets_images_icons_normal_png__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../assets/images/icons/normal.png */ \"./src/assets/images/icons/normal.png\");\n/* harmony import */ var _assets_images_icons_poison_png__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../assets/images/icons/poison.png */ \"./src/assets/images/icons/poison.png\");\n/* harmony import */ var _assets_images_icons_psychic_png__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../assets/images/icons/psychic.png */ \"./src/assets/images/icons/psychic.png\");\n/* harmony import */ var _assets_images_icons_water_png__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../assets/images/icons/water.png */ \"./src/assets/images/icons/water.png\");\n/* harmony import */ var _assets_images_icons_rock_png__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../assets/images/icons/rock.png */ \"./src/assets/images/icons/rock.png\");\n/* harmony import */ var _assets_images_icons_steel_png__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../assets/images/icons/steel.png */ \"./src/assets/images/icons/steel.png\");\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvar setImg = function setImg(type) {\n  var img;\n\n  switch (type) {\n    case 'fire':\n      img = _assets_images_icons_fire_png__WEBPACK_IMPORTED_MODULE_0__;\n      break;\n\n    case 'bug':\n      img = _assets_images_icons_bug_png__WEBPACK_IMPORTED_MODULE_1__;\n      break;\n\n    case 'dark':\n      img = _assets_images_icons_dark_png__WEBPACK_IMPORTED_MODULE_2__;\n      break;\n\n    case 'dragon':\n      img = _assets_images_icons_dragon_png__WEBPACK_IMPORTED_MODULE_3__;\n      break;\n\n    case 'electric':\n      img = _assets_images_icons_electric_png__WEBPACK_IMPORTED_MODULE_4__;\n      break;\n\n    case 'fairy':\n      img = _assets_images_icons_fairy_png__WEBPACK_IMPORTED_MODULE_5__;\n      break;\n\n    case 'fighting':\n      img = _assets_images_icons_fighting_png__WEBPACK_IMPORTED_MODULE_6__;\n      break;\n\n    case 'flying':\n      img = _assets_images_icons_flying_png__WEBPACK_IMPORTED_MODULE_7__;\n      break;\n\n    case 'ghost':\n      img = _assets_images_icons_ghost_png__WEBPACK_IMPORTED_MODULE_8__;\n      break;\n\n    case 'grass':\n      img = _assets_images_icons_grass_png__WEBPACK_IMPORTED_MODULE_9__;\n      break;\n\n    case 'ground':\n      img = _assets_images_icons_ground_png__WEBPACK_IMPORTED_MODULE_10__;\n      break;\n\n    case 'ice':\n      img = _assets_images_icons_ice_png__WEBPACK_IMPORTED_MODULE_11__;\n      break;\n\n    case 'normal':\n      img = _assets_images_icons_normal_png__WEBPACK_IMPORTED_MODULE_12__;\n      break;\n\n    case 'poison':\n      img = _assets_images_icons_poison_png__WEBPACK_IMPORTED_MODULE_13__;\n      break;\n\n    case 'psychic':\n      img = _assets_images_icons_psychic_png__WEBPACK_IMPORTED_MODULE_14__;\n      break;\n\n    case 'rock':\n      img = _assets_images_icons_rock_png__WEBPACK_IMPORTED_MODULE_16__;\n      break;\n\n    case 'steel':\n      img = _assets_images_icons_steel_png__WEBPACK_IMPORTED_MODULE_17__;\n      break;\n\n    default:\n      img = _assets_images_icons_water_png__WEBPACK_IMPORTED_MODULE_15__;\n      break;\n  }\n\n  return img;\n};\n\nvar getTypes = function getTypes(types, ul) {\n  types.forEach(function (element) {\n    var li = document.createElement('li');\n    var img = document.createElement('img');\n    var span = document.createElement('span');\n    span.textContent = element.type.name;\n    img.src = setImg(element.type.name);\n    li.append(img, span);\n    ul.append(li);\n  });\n};\n\nvar Elements = function Elements(pk) {\n  var pcard = document.createElement('div');\n  pcard.classList.add('poke-card');\n  var picture = document.createElement('picture');\n  picture.classList.add('poke-image-container');\n  var pokeball = document.createElement('div');\n  pokeball.classList.add('pokeball');\n  var img = document.createElement('img');\n\n  if (pk.sprites.other.dream_world.front_default) {\n    img.src = pk.sprites.other.dream_world.front_default;\n  } else {\n    img.src = pk.sprites.front_default;\n  }\n\n  img.alt = pk.name;\n  var info = document.createElement('div');\n  info.classList.add('poke-info');\n  var number = document.createElement('h3');\n  number.classList.add('number');\n  number.textContent = \"No. \".concat(pk.id);\n  var name = document.createElement('h2');\n  name.classList.add('name');\n  name.textContent = pk.name;\n  var list = document.createElement('ul');\n  list.classList.add('types');\n  getTypes(pk.types, list);\n  picture.append(pokeball, img);\n  info.append(number, name, list);\n  pcard.append(picture, info);\n  return pcard;\n};\n\n\n\n//# sourceURL=webpack://domjavascritp/./src/utils/genElement.js?");
 
 /***/ }),
 
@@ -70,7 +70,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"randomIds\": () => (/* binding */ randomIds)\n/* harmony export */ });\nvar Num = function Num(min, max) {\n  return Math.floor(Math.random() * (max - min + 1) + min);\n};\n\nvar randomIds = function randomIds() {\n  var idsPokemon = [];\n\n  while (idsPokemon.length < 6) {\n    var poke = Num(1, 150);\n\n    if (!idsPokemon.includes(poke)) {\n      idsPokemon.push(poke);\n    }\n  }\n\n  return idsPokemon;\n};\n\n\n\n//# sourceURL=webpack://domjavascritp/./src/utils/randomId.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"randomIds\": () => (/* binding */ randomIds)\n/* harmony export */ });\nvar Num = function Num(min, max) {\n  return Math.floor(Math.random() * (max - min + 1) + min);\n};\n\nvar randomIds = function randomIds() {\n  var idsPokemon = [];\n\n  while (idsPokemon.length < 6) {\n    var poke = Num(1, 898);\n\n    if (!idsPokemon.includes(poke)) {\n      idsPokemon.push(poke);\n    }\n  }\n\n  return idsPokemon;\n};\n\n\n\n//# sourceURL=webpack://domjavascritp/./src/utils/randomId.js?");
 
 /***/ }),
 
@@ -102,7 +102,7 @@ eval("/**\n * Copyright (c) 2014-present, Facebook, Inc.\n *\n * This source cod
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"307a169c850ddedc3aad.png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/bug.png?");
+eval("module.exports = __webpack_require__.p + \"assets/images/307a169c850ddedc3aad..png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/bug.png?");
 
 /***/ }),
 
@@ -113,7 +113,7 @@ eval("module.exports = __webpack_require__.p + \"307a169c850ddedc3aad.png\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"04c891c99d1ae3880270.png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/dark.png?");
+eval("module.exports = __webpack_require__.p + \"assets/images/04c891c99d1ae3880270..png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/dark.png?");
 
 /***/ }),
 
@@ -124,7 +124,7 @@ eval("module.exports = __webpack_require__.p + \"04c891c99d1ae3880270.png\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"e0f9a009aab9c7f8e5b9.png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/dragon.png?");
+eval("module.exports = __webpack_require__.p + \"assets/images/e0f9a009aab9c7f8e5b9..png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/dragon.png?");
 
 /***/ }),
 
@@ -135,7 +135,7 @@ eval("module.exports = __webpack_require__.p + \"e0f9a009aab9c7f8e5b9.png\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"42921bde650619de5eeb.png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/electric.png?");
+eval("module.exports = __webpack_require__.p + \"assets/images/42921bde650619de5eeb..png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/electric.png?");
 
 /***/ }),
 
@@ -146,7 +146,7 @@ eval("module.exports = __webpack_require__.p + \"42921bde650619de5eeb.png\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"9e97158217f0c34fd396.png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/fairy.png?");
+eval("module.exports = __webpack_require__.p + \"assets/images/9e97158217f0c34fd396..png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/fairy.png?");
 
 /***/ }),
 
@@ -157,7 +157,7 @@ eval("module.exports = __webpack_require__.p + \"9e97158217f0c34fd396.png\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"8df2ffd3b8f8d0aeba82.png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/fighting.png?");
+eval("module.exports = __webpack_require__.p + \"assets/images/8df2ffd3b8f8d0aeba82..png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/fighting.png?");
 
 /***/ }),
 
@@ -168,7 +168,7 @@ eval("module.exports = __webpack_require__.p + \"8df2ffd3b8f8d0aeba82.png\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"c0a0112b1103fa4a741d.png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/fire.png?");
+eval("module.exports = __webpack_require__.p + \"assets/images/c0a0112b1103fa4a741d..png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/fire.png?");
 
 /***/ }),
 
@@ -179,7 +179,7 @@ eval("module.exports = __webpack_require__.p + \"c0a0112b1103fa4a741d.png\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"63640afc9aacfc787161.png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/flying.png?");
+eval("module.exports = __webpack_require__.p + \"assets/images/63640afc9aacfc787161..png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/flying.png?");
 
 /***/ }),
 
@@ -190,7 +190,7 @@ eval("module.exports = __webpack_require__.p + \"63640afc9aacfc787161.png\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"5245768f7b284f3f9d95.png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/ghost.png?");
+eval("module.exports = __webpack_require__.p + \"assets/images/5245768f7b284f3f9d95..png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/ghost.png?");
 
 /***/ }),
 
@@ -201,7 +201,7 @@ eval("module.exports = __webpack_require__.p + \"5245768f7b284f3f9d95.png\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"abf0000f1dcb0969aaf9.png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/grass.png?");
+eval("module.exports = __webpack_require__.p + \"assets/images/0d91249daf8331086eb2..png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/grass.png?");
 
 /***/ }),
 
@@ -212,7 +212,7 @@ eval("module.exports = __webpack_require__.p + \"abf0000f1dcb0969aaf9.png\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"dd641f6e1cc78624a8bc.png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/ground.png?");
+eval("module.exports = __webpack_require__.p + \"assets/images/dd641f6e1cc78624a8bc..png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/ground.png?");
 
 /***/ }),
 
@@ -223,7 +223,7 @@ eval("module.exports = __webpack_require__.p + \"dd641f6e1cc78624a8bc.png\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"9ed34063ebc42cd195f1.png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/ice.png?");
+eval("module.exports = __webpack_require__.p + \"assets/images/9ed34063ebc42cd195f1..png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/ice.png?");
 
 /***/ }),
 
@@ -234,7 +234,7 @@ eval("module.exports = __webpack_require__.p + \"9ed34063ebc42cd195f1.png\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"42582a51cacdbf77cc29.png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/normal.png?");
+eval("module.exports = __webpack_require__.p + \"assets/images/42582a51cacdbf77cc29..png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/normal.png?");
 
 /***/ }),
 
@@ -245,7 +245,7 @@ eval("module.exports = __webpack_require__.p + \"42582a51cacdbf77cc29.png\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"014fc6adaee412ea2475.png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/poison.png?");
+eval("module.exports = __webpack_require__.p + \"assets/images/014fc6adaee412ea2475..png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/poison.png?");
 
 /***/ }),
 
@@ -256,7 +256,29 @@ eval("module.exports = __webpack_require__.p + \"014fc6adaee412ea2475.png\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"d611ccc71acdb1a3163e.png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/psychic.png?");
+eval("module.exports = __webpack_require__.p + \"assets/images/d611ccc71acdb1a3163e..png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/psychic.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/icons/rock.png":
+/*!******************************************!*\
+  !*** ./src/assets/images/icons/rock.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"assets/images/c72bba90170c8f47a5a2..png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/rock.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/icons/steel.png":
+/*!*******************************************!*\
+  !*** ./src/assets/images/icons/steel.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"assets/images/4a973925fabe520ecaf1..png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/steel.png?");
 
 /***/ }),
 
@@ -267,7 +289,7 @@ eval("module.exports = __webpack_require__.p + \"d611ccc71acdb1a3163e.png\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"f2a2df3c8c3771a0c211.png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/water.png?");
+eval("module.exports = __webpack_require__.p + \"assets/images/f2a2df3c8c3771a0c211..png\";\n\n//# sourceURL=webpack://domjavascritp/./src/assets/images/icons/water.png?");
 
 /***/ }),
 
