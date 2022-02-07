@@ -1,16 +1,6 @@
 import {Template} from './templates/Template.js'
 import './styles/main.css'
 
-
-let picture = document.querySelector('.poke-image-container')
-let elementWidth = window.getComputedStyle(picture)
-
-picture.style.height = elementWidth.getPropertyValue('width')
-
-console.log(elementWidth.getPropertyValue('width'))
-picture.addEventListener('change', () => {
-    picture.style.height = picture.style.width
-})
 // Template().then((value) => {
 //     console.log(value)
 // })

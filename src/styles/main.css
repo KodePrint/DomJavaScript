@@ -28,11 +28,10 @@ body {
     width: 100%;
 }
 #main {
-    margin: 0 auto;
+    margin: auto;
     /* El ancho maximo sera de 90% 
     pero nunca superara 1420px */
     max-width: min(90%, 142rem);
-    display: grid;
 }
 .title {
     margin-top: 1.4rem;
@@ -46,13 +45,23 @@ body {
     display: flex;
     align-items: center;
 }
-.poke-container {
+
+/* .poke-container {
     margin-top: 1.4rem;
-    place-content: center;
     display: grid;
     grid-template-rows: 15rem;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 30rem), 34rem));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 30rem), 38rem));
+    gap: 2rem;;
+    opacity: 1;
+    place-content: center;
+    transition: .3s all ease;
+} */
+.poke-container {
+    margin: 1.6rem auto;
+    display: grid;
     gap: 2rem;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 30rem), 38rem));
 }
 .poke-card {
     border-bottom-right-radius: 5rem;
@@ -120,7 +129,7 @@ body {
     text-transform: capitalize;
 }
 .poke-info .name {
-    font-size: clamp(1.6rem, 2vw, 2.5rem);
+    font-size: clamp(1.8rem, 2vw, 2.5rem);
     text-transform: capitalize;
 }
 .poke-info ul {
@@ -139,8 +148,8 @@ body {
     margin-right: .5rem;
 }
 .poke-info ul li span {
-    font-size: clamp(.8rem, 2vw, 1.2rem);
-
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    text-transform: capitalize;
 }
 
 .buttons {
@@ -163,6 +172,7 @@ body {
     overflow: hidden;
     width: 17rem;
     text-shadow: .2rem .2rem .2rem var(--dark);
+    transition: .6s all ease;
 }
 .getData .buton-poke {
     position: absolute;
@@ -176,6 +186,10 @@ body {
     transition: .6s all ease;
     z-index: -1;
     opacity: 0;
+}
+.getData:hover {
+    color: var(--white);
+    text-shadow: .1rem .1rem .2rem red;
 }
 .getData:hover .buton-poke {
     left: calc(100% - 4rem);
@@ -202,30 +216,19 @@ body {
     stroke-dashoffset: 0;
 }
 
-
-/* .getData::before {
-    content: "";
-    height: 100%;
-    width: 150%;
-    background: red;
-    position: absolute;
-    top: calc(-25%);
-    left: calc(-50%);
-    transform: rotate(-15deg);
-    z-index: -1;
+@keyframes rotateSpin {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: 1;
+    }
 }
-.getData::after {
-    content: "";
-    height: 100%;
-    width: 150%;
-    background: var(--border);
-    position: absolute;
-    top: calc(25%);
-    right: calc(-50%);
-    transform: rotate(-15deg);
-    z-index: -1;
-} */
-
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
@@ -246,5 +249,8 @@ body {
     62% {transform: translateX(.5rem);}
     75% {transform: translateX(-.5rem);}
     100% {transform: scale(100%) translateX(.-5rem);}
+};
+
+@media screen(max-width:) {
     
 }
