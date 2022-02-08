@@ -109,7 +109,7 @@ const Elements = (pk) => {
     info.classList.add('poke-info');
     let number = document.createElement('h3');
     number.classList.add('number')
-    number.textContent = `No. ${pk.id}`;
+    number.textContent = `No. ${pk.id.toString().padStart(3, 0)}`;
     let name = document.createElement('h2');
     name.classList.add('name')
     name.textContent = pk.name;

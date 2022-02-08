@@ -7,15 +7,20 @@ import './styles/main.css'
 const container = null || document.querySelector('.poke-container');
 
 const getTeam = document.querySelector('.getData').addEventListener('click', () => {
-    DrawTemplate()
+    //DrawTemplate()
+    DrawTemplate();
+
 })
 const DrawTemplate = async () => {
-    let object = await Template()
+    const spinner = document.querySelector('.spiner');
     if (container.childElementCount > 0) {
+        spinner.style.display = 'block';
         let cards = document.querySelectorAll('.poke-card')
         cards.forEach(card => {
             card.remove()
         });
     }
+    let object = await Template();
     container.append(...object)
+    spinner.style.display = 'none';
 };
